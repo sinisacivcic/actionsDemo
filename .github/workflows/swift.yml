@@ -4,10 +4,10 @@
 name: Swift
 
 on:
-  #push:
-  #  branches: [ "main" ]
+  push:
+    branches: [ "dev" ] #trigger on each push to dev
   pull_request:
-    branches: [ "main" ]
+    branches: [ "dev" ] #trigger on each PR for dev
 
 jobs:
   build:
