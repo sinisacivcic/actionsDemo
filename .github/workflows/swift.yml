@@ -29,6 +29,6 @@ jobs:
     - name: CocoaPod Install
       run: pod install
     - name: Build
-      run: xcodebuild clean build test -workspace actionsDemo.xcworkspace -scheme actionsDemo -sdk iphonesimulator -destination "platform=iOS Simulator" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+      run: xcodebuild clean build test -workspace actionsDemo.xcworkspace -scheme actionsDemo -sdk iphonesimulator -destination "iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
     - name: Test
       run: xcodebuild -workspace actionsDemo.xcworkspace -scheme actionsDemo -sdk iphonesimulator -destination 'platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device' test
