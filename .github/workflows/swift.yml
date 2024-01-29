@@ -29,6 +29,6 @@ jobs:
     - name: CocoaPod Install
       run: pod install
     - name: Build
-      run: xcodebuild -workspace actionsDemo.xcworkspace -scheme actionsDemo -configuration Release -sdk iphonesimulator -destination 'platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device'
+      run: xcodebuild -workspace actionsDemo.xcworkspace -scheme actionsDemo -configuration Release -sdk iphonesimulator -destination "generic/platform=iOS"
     - name: Test
       run: xcodebuild -workspace actionsDemo.xcworkspace -scheme actionsDemo -sdk iphonesimulator -destination 'platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device' test
