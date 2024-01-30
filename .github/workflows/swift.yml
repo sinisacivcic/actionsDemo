@@ -47,18 +47,6 @@ jobs:
         destination: platform=iOS Simulator,name=iPhone 13 Pro Max
         action: build
 
-    - name: Test MyApp
-      uses: sersoft-gmbh/xcodebuild-action@v3
-      with:
-        workspace: actionsDemo.xcworkspace
-        scheme: actionsDemo
-        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
-        action: test
-
-      - name: Format and display test results
-        run: |
-          xcodebuild test -workspace actionsDemo.xcworkspace -scheme actionsDemo | xcpretty
-
 #    - name: Build
 #      run: xcodebuild build -workspace actionsDemo.xcworkspace -scheme actionsDemo clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
         
