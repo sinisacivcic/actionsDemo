@@ -39,19 +39,12 @@ jobs:
         xcode-version: latest-stable
 #        xcode-version: '14.2.0'
     
-#    - name: Build
-#      uses: sersoft-gmbh/xcodebuild-action@v3
-#      with:
-#        workspace: actionsDemo.xcworkspace
-#        scheme: actionsDemo
-#        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
-#        action: build
-        
-    - name: Build MyApp
+    - name: Build
       uses: sersoft-gmbh/xcodebuild-action@v3
       with:
         workspace: actionsDemo.xcworkspace
         scheme: actionsDemo
+#        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
         action: build
 
     - name: Test MyApp
