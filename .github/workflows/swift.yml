@@ -43,4 +43,4 @@ jobs:
 #      run: xcodebuild build -workspace actionsDemo.xcworkspace -scheme actionsDemo clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
         
     - name: Test
-      run: xcodebuild clean test -workspace actionsDemo.xcworkspace -scheme actionsDemo -sdk iphonesimulator -destination 'platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device'
+      run: xcodebuild test -scheme actionsDemo -destination "platform=iphonesimulator, OS=16.4, name=iPhone 14 Pro" -enableCodeCoverage YES -resultBundlePath "$PWD/xcode-$NOW.xcresult"
