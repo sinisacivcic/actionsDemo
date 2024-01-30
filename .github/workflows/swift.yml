@@ -31,7 +31,7 @@ jobs:
     - name: setup-cocoapods
       uses: maxim-lobanov/setup-cocoapods@v1
       with:
-        podfile-path: actionsDemo/Podfile.lock
+        podfile-path: /Podfile.lock
       
     - name: Xcode Setup
       uses: maxim-lobanov/setup-xcode@v1
