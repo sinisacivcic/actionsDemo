@@ -44,7 +44,7 @@ jobs:
       with:
         workspace: actionsDemo.xcworkspace
         scheme: actionsDemo
-#        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
+        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
         action: build
 
     - name: Test MyApp
@@ -52,6 +52,7 @@ jobs:
       with:
         workspace: actionsDemo.xcworkspace
         scheme: actionsDemo
+        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
         action: test
 
       - name: Format and display test results
