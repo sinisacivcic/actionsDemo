@@ -38,16 +38,14 @@ jobs:
       with:
         xcode-version: latest-stable
 #        xcode-version: '14.2.0'
-
-    - uses: mxcl/xcodebuild@v1
     
-#    - name: Build
-#      uses: sersoft-gmbh/xcodebuild-action@v3
-#      with:
-#        workspace: actionsDemo.xcworkspace
-#        scheme: actionsDemo
-#        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
-#        action: build
+    - name: Build
+      uses: sersoft-gmbh/xcodebuild-action@v3
+      with:
+        workspace: actionsDemo.xcworkspace
+        scheme: actionsDemo
+        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
+        action: build
 
 #    - name: Build
 #      run: xcodebuild build -workspace actionsDemo.xcworkspace -scheme actionsDemo clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
