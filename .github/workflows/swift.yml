@@ -28,9 +28,16 @@ jobs:
           ${{ runner.os }}-pods-
     - name: CocoaPod Install
       run: pod install
+      
+    - name: Xcode Setup
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '14.1'
+      
     - name: Build
       run: |
         cd actionsDemo
         xcodebuild build -workspace actionsDemo.xcworkspace -scheme actionsDemo clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
+        
     - name: Test
       run: xcodebuild clean test -workspace actionsDemo.xcworkspace -scheme actionsDemo -sdk iphonesimulator -destination 'platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device'
