@@ -44,9 +44,8 @@ jobs:
       with:
         workspace: actionsDemo.xcworkspace
         scheme: actionsDemo
+        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
         action: build
-        - destination: platform=iOS Simulator,name=iPhone 13 Pro Max
-        - test-without-building: true
 #    - name: Build
 #      run: xcodebuild build -workspace actionsDemo.xcworkspace -scheme actionsDemo clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
         
