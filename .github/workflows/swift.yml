@@ -23,7 +23,7 @@ jobs:
     - uses: actions/cache@v2
       with:
         path: Pods
-        key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+        key: ${{ runner.os }}-pods-${{ hashFiles('Podfile.lock') }}
         restore-keys: |
           ${{ runner.os }}-pods-
 #    - name: CocoaPod Install
@@ -31,7 +31,7 @@ jobs:
     - name: setup-cocoapods
       uses: maxim-lobanov/setup-cocoapods@v1
       with:
-        podfile-path: /Podfile.lock
+        podfile-path: Podfile.lock
       
     - name: Xcode Setup
       uses: maxim-lobanov/setup-xcode@v1
