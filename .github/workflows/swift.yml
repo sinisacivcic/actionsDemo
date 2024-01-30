@@ -45,4 +45,4 @@ jobs:
 #    - name: Test
 #      run: xcodebuild clean test -workspace actionsDemo.xcworkspace -scheme actionsDemo -sdk iphonesimulator -destination 'platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device'
     - name: Test
-    run: xcodebuild test -scheme KukaiCoreSwift -destination "platform=iphonesimulator,OS=16.4,name=iPhone 14 Pro" -enableCodeCoverage YES -resultBundlePath "$PWD/xcode-$NOW.xcresult"
+        run: xcodebuild test -scheme actionsDemo -destination "platform=iphonesimulator,OS=16.4,name=iPhone 14 Pro" -enableCodeCoverage YES -resultBundlePath "$PWD/xcode-$NOW.xcresult"
