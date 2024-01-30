@@ -32,7 +32,7 @@ jobs:
     - name: Xcode Setup
       uses: maxim-lobanov/setup-xcode@v1
       with:
-        xcode-version: '13.2'
+        xcode-version: latest-stable
       
     - name: Build
       run: xcodebuild build -workspace actionsDemo.xcworkspace -scheme actionsDemo clean build -sdk iphonesimulator CODE_SIGNING_ALLOWED=No
