@@ -39,7 +39,7 @@ jobs:
         xcode-version: latest-stable
 #        xcode-version: '14.2.0'
 
-    - use: mxcl/xcodebuild@v1
+    - uses: mxcl/xcodebuild@v1
     
 #    - name: Build
 #      uses: sersoft-gmbh/xcodebuild-action@v3
