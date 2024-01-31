@@ -45,7 +45,7 @@ jobs:
 #        action: build
         action: build-for-testing
         
-    - name: Build
+    - name: Test
       uses: sersoft-gmbh/xcodebuild-action@v3
       with:
 #        project: actionsDemo.xcodeproj
@@ -53,4 +53,4 @@ jobs:
         scheme: actionsDemo
         destination: platform=iOS Simulator,name=iPhone 13 Pro Max
 #        action: build
-        action: testing
+        action: test
