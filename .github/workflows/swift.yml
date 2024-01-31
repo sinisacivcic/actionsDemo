@@ -48,7 +48,7 @@ jobs:
 #        action: build
         workspace: actionsDemo.xcworkspace
         scheme: actionsDemo
-        destination: generic/platform=iOS
+        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
         action: test
 #        action: build-for-testing
 
