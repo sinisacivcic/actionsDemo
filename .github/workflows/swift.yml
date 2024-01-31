@@ -48,7 +48,7 @@ jobs:
 #        action: build
         workspace: actionsDemo.xcworkspace
         scheme: actionsDemo
-        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
+        destination: platform=iOS Simulator,name=iPhone 13 Pro Max CODE_SIGNING_ALLOWED=No
         action: build
 #        action: build-for-testing
 
