@@ -16,8 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Homebrew build helpers install
-      run: brew bundle
 #    - name: Build
 #      run: swift build -v
 #    - name: Run tests
@@ -30,15 +28,15 @@ jobs:
 #          ${{ runner.os }}-pods-
 #    - name: CocoaPod Install
 #      run: pod install
-#    - name: setup-cocoapods
-#      uses: maxim-lobanov/setup-cocoapods@v1
-#      with:
-#        podfile-path: Podfile.lock
+    - name: setup-cocoapods
+      uses: maxim-lobanov/setup-cocoapods@v1
+      with:
+        podfile-path: Podfile.lock
       
-#    - name: Xcode Setup
-#      uses: maxim-lobanov/setup-xcode@v1
-#      with:
-#        xcode-version: latest-stable
+    - name: Xcode Setup
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable
 ##        xcode-version: '14.2.0'
 
     - name: Build and Test
