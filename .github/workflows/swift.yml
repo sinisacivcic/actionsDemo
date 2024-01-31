@@ -49,7 +49,8 @@ jobs:
         workspace: actionsDemo.xcworkspace
         scheme: actionsDemo
         destination: generic/platform=iOS
-        action: build-for-testing
+        action: test
+#        action: build-for-testing
 
 #    - name: Build
 #      run: xcodebuild build -workspace actionsDemo.xcworkspace -scheme actionsDemo clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
