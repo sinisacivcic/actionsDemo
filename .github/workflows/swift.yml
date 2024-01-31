@@ -16,10 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-#    - name: Build
-#      run: swift build -v
-#    - name: Run tests
-#      run: swift test -v
 #    - uses: actions/cache@v2
 #      with:
 #        path: Pods
@@ -38,15 +34,6 @@ jobs:
       with:
         xcode-version: latest-stable
 #        xcode-version: '15.2.0'
-
-#    - name: Build and Test
-#      run: |
-#        xcodebuild \
-#        -workspace actionsDemo.xcworkspace \
-#        -scheme actionsDemo \
-#        -sdk iphonesimulator \
-#        -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.2' \
-#         test || exit 1
     
     - name: Build
       uses: sersoft-gmbh/xcodebuild-action@v3
@@ -57,11 +44,13 @@ jobs:
         destination: platform=iOS Simulator,name=iPhone 13 Pro Max
 #        action: build
         action: build-for-testing
-
-
-
-#    - name: Build
-#      run: xcodebuild build -workspace actionsDemo.xcworkspace -scheme actionsDemo clean build -sdk iphoneos CODE_SIGNING_ALLOWED=No
         
-#    - name: Test
-#      run: xcodebuild clean test -workspace actionsDemo.xcworkspace -scheme actionsDemo -sdk iphonesimulator -destination 'platform:iOS Simulator, id:dvtdevice-DVTiOSDeviceSimulatorPlaceholder-iphonesimulator:placeholder, name:Any iOS Simulator Device'
+    - name: Build
+      uses: sersoft-gmbh/xcodebuild-action@v3
+      with:
+#        project: actionsDemo.xcodeproj
+        workspace: actionsDemo.xcworkspace
+        scheme: actionsDemo
+        destination: platform=iOS Simulator,name=iPhone 13 Pro Max
+#        action: build
+        action: testing

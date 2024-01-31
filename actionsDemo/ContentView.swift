@@ -20,7 +20,7 @@ struct ContentView: View {
     }
 }
 
-//MARK: - This causes error on Github Actions
+//MARK: - This cause error on Github Actions
 //#Preview {
 //    let categories = ContentView()
 //    return categories
