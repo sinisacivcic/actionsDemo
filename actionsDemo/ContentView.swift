@@ -19,7 +19,14 @@ struct ContentView: View {
     }
 }
 
-#Preview {
-    let categories = ContentView()
-    return categories
+//MARK: - This causes error on Github Actions
+//#Preview {
+//    let categories = ContentView()
+//    return categories
+//}
+
+struct CategoryView_Preview: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
